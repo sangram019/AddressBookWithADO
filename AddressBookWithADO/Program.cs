@@ -16,6 +16,22 @@ switch (op)
     case 2:
         addressBookData.CreateTables();
         break;
+    case 3:
+        AddressBookModel addressbook = new AddressBookModel();
+        addressbook.FirstName = "Sangram";
+        addressbook.LastName = "Behera";
+        addressbook.Address = "Bhadrak";
+        addressbook.City = "Bhadrak";
+        addressbook.State = "Odisha";
+        addressbook.Zip = "756137";
+        addressbook.PhoneNumber = "7077445649";
+        addressbook.Email = "sangram15.behera@gmail.com";
+        addressBookData.AddContact(addressbook);
+        Console.WriteLine("Record Inserted successfully");
+        break;
+    case 4:
+        addressBookData.GetAllContact();
+        break;
     default:
         Console.WriteLine("Please choose the correct option!");
         break;
