@@ -37,6 +37,11 @@ switch (op)
         Console.WriteLine(UpdatedAddress);
         Console.WriteLine("Record Updated successfully");
         break;
+    case 6:
+        addressBookData.deleteEmployeeDetails();
+        Console.WriteLine("Record deleated successfully");
+        break;
+
     default:
         Console.WriteLine("Please choose the correct option!");
         break;

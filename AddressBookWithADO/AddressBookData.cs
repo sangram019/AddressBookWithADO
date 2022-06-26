@@ -152,5 +152,15 @@ namespace AddressBook_ADO.NET
             connection.Close();
             return (addressmodel.Address);
         }
+        public void deleteEmployeeDetails()
+        {
+            SqlConnection connection = new SqlConnection(@"Data Source=BridgeLabz; Initial Catalog =AddressBookForADO; Integrated Security = True; TrustServerCertificate=True;");
+            connection.Open();
+            string query = @"DELETE FROM AddressBook where FirstName = 'Prajna'";
+            SqlCommand cmd = new SqlCommand(query, connection);
+            object res = cmd.ExecuteScalar();
+            connection.Close();
+
+        }
     }
 }
