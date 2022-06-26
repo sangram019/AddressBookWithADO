@@ -32,6 +32,11 @@ switch (op)
     case 4:
         addressBookData.GetAllContact();
         break;
+    case 5:
+        string UpdatedAddress = addressBookData.updateEmployeeDetails();
+        Console.WriteLine(UpdatedAddress);
+        Console.WriteLine("Record Updated successfully");
+        break;
     default:
         Console.WriteLine("Please choose the correct option!");
         break;
