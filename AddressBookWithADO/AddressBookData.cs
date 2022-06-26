@@ -136,14 +136,14 @@ namespace AddressBook_ADO.NET
         {
             AddressBookModel addressmodel = new AddressBookModel();
 
-            SqlConnection Connection = new SqlConnection(@"Data Source=DESKTOP-2DTGFII; Initial Catalog =AddressBookForADO; Integrated Security = True;");
+            SqlConnection Connection = new SqlConnection(@"Data Source=BridgeLabz; Initial Catalog =AddressBookADO; Integrated Security = True;");
             connection.Open();
-            SqlCommand command = new SqlCommand("update AddressBook set Address='Rasayani' where FirstName='Mayuri'", connection);
+            SqlCommand command = new SqlCommand("update AddressBook set Address='Delhi' where FirstName='Ramesh'", connection);
 
             int effectedRow = command.ExecuteNonQuery();
             if (effectedRow == 1)
             {
-                string query = @"Select Address from AddressBook where FirstName='Shravanthi';";
+                string query = @"Select Address from AddressBook where FirstName='Rakesh';";
                 SqlCommand cmd = new SqlCommand(query, connection);
                 object res = cmd.ExecuteScalar();
                 connection.Close();
