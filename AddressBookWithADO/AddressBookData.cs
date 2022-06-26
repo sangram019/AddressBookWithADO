@@ -235,5 +235,30 @@ namespace AddressBook_ADO.NET
                 Console.WriteLine(e.Message);
             }
         }
+        public int CountOfEmployeeDetailsByCity()
+        {
+            int count;
+            SqlConnection Connection = new SqlConnection(@"Data Source=BridgeLabz; Initial Catalog =AddressBookForADO; Integrated Security = True;");
+            connection.Open();
+            string query = @"Select count(*) from AddressBook where City='Bdk';";
+            SqlCommand command = new SqlCommand(query, connection);
+            object res = command.ExecuteScalar();
+            connection.Close();
+            int Count = (int)res;
+            return Count;
+        }
+        public int CountOfEmployeeDetailsByState()
+        {
+            int count;
+            SqlConnection Connection = new SqlConnection(@"Data Source=BridgeLabz; Initial Catalog =AddressBookForADO; Integrated Security = True;");
+            connection.Open();
+            string query = @"Select count(*) from AddressBook where State='Odisha';";
+            SqlCommand command = new SqlCommand(query, connection);
+            object res = command.ExecuteScalar();
+            connection.Close();
+            int Count = (int)res;
+            return Count;
+        }
     }
 }
+   

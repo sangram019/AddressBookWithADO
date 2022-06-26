@@ -50,6 +50,12 @@ switch (op)
         Console.WriteLine("Get Contacts by State name");
         addressBookData.GetAllContactByState();
         break;
+    case 9:
+        int countCity = addressBookData.CountOfEmployeeDetailsByCity();
+        Console.WriteLine("Count of Records for given City :" + countCity);
+        int CountState = addressBookData.CountOfEmployeeDetailsByState();
+        Console.WriteLine("Count of Records for given State :" + CountState);
+        break;
 
     default:
         Console.WriteLine("Please choose the correct option!");
