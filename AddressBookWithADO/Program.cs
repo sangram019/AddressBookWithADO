@@ -42,6 +42,15 @@ switch (op)
         Console.WriteLine("Record deleated successfully");
         break;
 
+    case 7:
+        Console.WriteLine("Get Contacts by City name");
+        addressBookData.GetAllContactByCity();
+        break;
+    case 8:
+        Console.WriteLine("Get Contacts by State name");
+        addressBookData.GetAllContactByState();
+        break;
+
     default:
         Console.WriteLine("Please choose the correct option!");
         break;
